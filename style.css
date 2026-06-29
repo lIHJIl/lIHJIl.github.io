@@ -1,8 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     font-family: "Be Vietnam Pro", sans-serif;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -14,6 +17,105 @@
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+#wrapper::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari/Edge */
+}
+
+/* === Custom Skateboard Scrollbar === */
+.custom-scrollbar-track {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 100vh;
+    z-index: 9999;
+    /* Dark asphalt road */
+    background: linear-gradient(to right,
+            #1a1a1a 0%,
+            #2a2a2a 15%,
+            #333 40%,
+            #333 60%,
+            #2a2a2a 85%,
+            #1a1a1a 100%);
+    /* Subtle road edge lines */
+    border-left: 2px solid #555;
+    border-right: 2px solid #555;
+    cursor: pointer;
+}
+
+/* White dashed center line (road marking) */
+.custom-scrollbar-track::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: repeating-linear-gradient(to bottom,
+            #fff 0px,
+            #fff 12px,
+            transparent 12px,
+            transparent 28px);
+    opacity: 0.6;
+}
+
+/* Skateboard thumb */
+.custom-scrollbar-thumb {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 45px;
+    cursor: grab;
+    transition: top 0.05s linear;
+    z-index: 10;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.custom-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+
+.custom-scrollbar-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* Wobble animation triggered by JS class */
+.custom-scrollbar-thumb.wobble {
+    animation: skateWobble 0.4s ease-in-out;
+}
+
+@keyframes skateWobble {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(-50%) rotate(4deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(-4deg);
+    }
+
+    75% {
+        transform: translateX(-50%) rotate(2deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
 }
 
 .container {
@@ -193,6 +295,7 @@ a {
     /* filter: grayscale(1); */
     transition: all 1s;
     animation: scaleImage 5s linear infinite;
+    will-change: transform, filter;
     /* width: 345px;
     height: 390px; */
 }
@@ -229,6 +332,7 @@ a {
     animation-name: dotsAnimation;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+    will-change: transform;
 }
 
 @keyframes dotsAnimation {
@@ -253,6 +357,7 @@ a {
     animation-name: cubeRotate;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+    will-change: transform;
 }
 
 @keyframes cubeRotate {
@@ -277,6 +382,7 @@ a {
     animation-duration: 6s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    will-change: left, bottom;
 }
 
 @keyframes shakeEffect {
@@ -293,6 +399,7 @@ a {
     top: 1.5em;
     left: -0.3em;
     animation: zigzagAnimation 5s ease-in infinite;
+    will-change: left, top;
 }
 
 @keyframes zigzagAnimation {
@@ -307,6 +414,7 @@ a {
     top: -0.8rem;
     left: 50%;
     animation: shakeEffectPlus 5s ease-in infinite;
+    will-change: top, left;
 }
 
 @keyframes shakeEffectPlus {
@@ -320,6 +428,8 @@ a {
 .project-section {
     background-color: rgb(231, 231, 231);
     margin-top: 4rem;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 2500px;
 }
 
 .pageheader {
@@ -347,6 +457,7 @@ a {
     background-repeat: no-repeat;
     position: relative;
     box-shadow: 0 0 40px #1f1f1f;
+    contain: content;
 }
 
 .project-card::after {
@@ -449,8 +560,6 @@ a {
     display: flex;
     gap: 0.9rem;
     align-items: center;
-    /* justify-content: center; */
-    align-items: center;
 }
 
 .btn-project:hover {
@@ -478,7 +587,7 @@ a {
 }
 
 #project2 {
-    background-image: url(Images/projects/GithubProfileVista.png);
+    background-image: url(Images/projects/HomePAGELightMode.png);
 }
 
 #project3 {
@@ -496,6 +605,8 @@ a {
     padding: 5rem;
     margin: 10rem auto;
     gap: 30px;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 600px;
 }
 
 .skill-container-left {
@@ -531,6 +642,7 @@ a {
     transform: translate(-50%, -50%);
     animation: blobAnimate 3s linear infinite;
     z-index: -5;
+    will-change: top, left;
 }
 
 @keyframes blobAnimate {
@@ -569,6 +681,8 @@ a {
 .contactus-form-container {
     width: 100%;
     background-color: rgb(231, 231, 231);
+    content-visibility: auto;
+    contain-intrinsic-size: auto 800px;
 }
 
 .contactus-heading {

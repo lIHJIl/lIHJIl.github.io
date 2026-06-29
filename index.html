@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Portfolio of Himank Joshi, showcasing web development, MERN stack, Java, and game design projects.">
+    <meta name="theme-color" content="#343d68">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700;900&family=DM+Serif+Display&display=swap"
         rel="stylesheet">
+    <link rel="preload" as="image" href="Images/userAsset/cartoon.jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -22,6 +24,13 @@
 
 <body>
 
+    <!-- Custom Skateboard Scrollbar -->
+    <div class="custom-scrollbar-track" id="scrollbar-track">
+        <div class="custom-scrollbar-thumb" id="scrollbar-thumb">
+            <img src="Images/userAsset/skate.svg" alt="Skateboard scrollbar" width="34" height="60" />
+        </div>
+    </div>
+
     <div id="wrapper">
 
         <div class="container">
@@ -30,7 +39,7 @@
 
                 <div class="logo-container">
                     <!-- <img class="logo" src="Images/userAsset/logo.png" alt="logo"> -->
-                    <img class="logo" src="./Images/userAsset/H.png" alt="logo">
+                    <img class="logo" src="./Images/userAsset/H.png" alt="logo" width="80" height="80">
                     <span id="span1">iman</span>
                     <span id="span2">K</span>
                 </div>
@@ -65,22 +74,28 @@
 
                 <div class="hero-section-right">
                     <div class="absolute icons icon-dots">
-                        <img src="Images/userAsset/dots.png" alt="" />
+                        <img src="Images/userAsset/dots.png" alt="" width="60" height="60" loading="lazy"
+                            decoding="async" />
                     </div>
                     <div class="absolute icons icon-cube">
-                        <img src="Images/userAsset/cube.png" alt="" />
+                        <img src="Images/userAsset/cube.png" alt="" width="40" height="40" loading="lazy"
+                            decoding="async" />
                     </div>
                     <div class="absolute icons icon-circle">
-                        <img src="Images/userAsset/circle.png" alt="" />
+                        <img src="Images/userAsset/circle.png" alt="" width="30" height="30" loading="lazy"
+                            decoding="async" />
                     </div>
                     <div class="absolute icons icon-zigzag">
-                        <img src="Images/userAsset/zigzags.png" alt="" />
+                        <img src="Images/userAsset/zigzags.png" alt="" width="50" height="25" loading="lazy"
+                            decoding="async" />
                     </div>
                     <div class="absolute icons icon-plus">
-                        <img src="Images/userAsset/plus.png" alt="" />
+                        <img src="Images/userAsset/plus.png" alt="" width="30" height="30" loading="lazy"
+                            decoding="async" />
                     </div>
                     <div class="user-image">
-                        <img src="Images/userAsset/cartoon.jpg" alt="" />
+                        <img src="Images/userAsset/cartoon.jpg" alt="Himank Joshi" width="250" height="250"
+                            fetchpriority="high" />
                     </div>
                 </div>
 
@@ -97,11 +112,16 @@
                     <div class="project-number project-number-right">01</div>
                     <div class="project-content project-content-left">
                         <div class="project-skill-container">
-                            <img class="project-skill" src="Images/stack/HTML.png" alt="HTML icon" loading="lazy" />
-                            <img class="project-skill" src="Images/stack/CSS.png" alt="CSS icon" loading="lazy" />
-                            <img class="project-skill" src="Images/stack/Javascript.svg" alt="JavaScript icon" loading="lazy" />
-                            <img class="project-skill" src="Images/stack/React.png" alt="React icon" loading="lazy" />
-                            <img class="project-skill" src="Images/stack/Vite.png" alt="Vite icon" loading="lazy" />
+                            <img class="project-skill" src="Images/stack/HTML.png" alt="HTML icon" width="40"
+                                height="40" loading="lazy" decoding="async" />
+                            <img class="project-skill" src="Images/stack/CSS.png" alt="CSS icon" width="40" height="40"
+                                loading="lazy" decoding="async" />
+                            <img class="project-skill" src="Images/stack/Javascript.svg" alt="JavaScript icon"
+                                width="40" height="40" loading="lazy" decoding="async" />
+                            <img class="project-skill" src="Images/stack/React.png" alt="React icon" width="40"
+                                height="40" loading="lazy" decoding="async" />
+                            <img class="project-skill" src="Images/stack/Vite.png" alt="Vite icon" width="40"
+                                height="40" loading="lazy" decoding="async" />
                         </div>
 
                         <h2 class="project-heading">Clinic Appointment System</h2>
@@ -110,12 +130,11 @@
                                 appointment system in the browser, using JavaScript, CSS, and HTML.</i>
                         </p>
                         <div class="btn-group">
-                            <!-- <button class="btn-pink btn-project">Read More</button> -->
-                            <!-- <a href="https://github.com/Himank8106/React_Random_GIF_Generator" target="_blank"> -->
-                            <i title="GitHubLink" class="fa-brands fa-github icon"></i>
-                            <!-- <a href="">
-                            <i title="Live Link" class="fa-solid fa-link icon"></i>
-                            </a> -->
+
+                            <a href="https://github.com/lIHJIl/aPPONIMENT_SYSTEM" target="_blank">
+                                <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -125,25 +144,31 @@
                     <div class="project-number project-number-left">02</div>
                     <div class="project-content project-content-right">
                         <div class="project-skill-container">
-                            <img class="project-skill" src="Images/stack/HTML.png" alt="HTML icon" loading="lazy" />
-                            <img class="project-skill" src="Images/stack/CSS.png" alt="CSS icon" loading="lazy" />
-                            <img class="project-skill" src="Images/stack/Javascript.svg" alt="JavaScript icon" loading="lazy" />
+                            <img class="project-skill" src="Images/stack/nextjs-svgrepo-com.svg" alt="Next.js icon"
+                                width="40" height="40" loading="lazy" decoding="async" />
+                            <img class="project-skill" src="Images/stack/HTML.png" alt="HTML icon" width="40"
+                                height="40" loading="lazy" decoding="async" />
+                            <img class="project-skill" src="Images/stack/CSS.png" alt="CSS icon" width="40" height="40"
+                                loading="lazy" decoding="async" />
+                            <img class="project-skill" src="Images/stack/Javascript.svg" alt="JavaScript icon"
+                                width="40" height="40" loading="lazy" decoding="async" />
                         </div>
-                        <h2 class="project-heading">Github Profile Vista</h2>
+                        <h2 class="project-heading">PushKart:An Ecommerce Website</h2>
                         <p class="project-sub-heading">
-                            <i>Build a dynamic blog application using React.js, utilizing API<br /> integration for
+                            <i>Build a dynamic E-commerce application using Next.js, utilizing React API<br />
+                                integration for
                                 seamless
                                 content retrieval and display.</i>
                         </p>
-                        <!-- <div class="btn-group">
-                             <button class="btn-pink btn-project">Read More</button> 
-                            <a href="https://github.com/Himank8106/Github_Profile_Vista" target="_blank">
-                            <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                        <div class="btn-group">
+
+                            <a href="https://github.com/lIHJIl/Push_Kart" target="_blank">
+                                <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                             </a>
-                            <a href="https://himank8106.github.io/Github_Profile_Vista/" target="_blank">
+                            <!--<a href="https://himank8106.github.io/Github_Profile_Vista/" target="_blank">
                             <i title="Live Link" class="fa-solid fa-link icon"></i>
-                            </a>
-                        </div> -->
+                            </a>-->
+                        </div>
                     </div>
                 </div>
 
@@ -151,14 +176,18 @@
                     <div class="project-number project-number-right">03</div>
                     <div class="project-content project-content-left">
                         <div class="project-skill-container">
-                            <img class="project-skill" src="Images/stack/HTML.png" alt="HTML icon" loading="lazy" />
-                            <img class="project-skill" src="Images/stack/CSS.png" alt="CSS icon" loading="lazy" />
-                            <img class="project-skill" src="Images/stack/Tailwind.png" alt="Tailwind icon" loading="lazy" />
+                            <img class="project-skill" src="Images/stack/HTML.png" alt="HTML icon" width="40"
+                                height="40" loading="lazy" decoding="async" />
+                            <img class="project-skill" src="Images/stack/CSS.png" alt="CSS icon" width="40" height="40"
+                                loading="lazy" decoding="async" />
+                            <img class="project-skill" src="Images/stack/Tailwind.png" alt="Tailwind icon" width="40"
+                                height="40" loading="lazy" decoding="async" />
                         </div>
 
                         <h2 class="project-heading">Razorpay Clone</h2>
                         <p class="project-sub-heading">
-                            <i>A captivating and responsive user interface (UI) meticulously crafted to elevate <br />
+                            <i>A captivating and responsive user interface (UI) meticulously crafted to elevate
+                                <br />
                                 the online payment process with style and functionality.
                             </i>
                         </p>
@@ -189,7 +218,8 @@
                         </p>
                         <div class="btn-group">
                             <!-- <button class="btn-pink btn-project">Read More</button> -->
-                            <a href="https://github.com/lIHJIl?tab=repositories" target="_blank" aria-label="Visit GitHub repository">
+                            <a href="https://github.com/lIHJIl?tab=repositories" target="_blank"
+                                aria-label="Visit GitHub repository">
                                 <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                             </a>
                             <!-- <a href="">
@@ -215,39 +245,59 @@
 
                 <div class="skill-subHeading">
                     <p>
-                        Hello everyone, I am a B.Tech Computer Science and Engineering student with a strong foundation
-                        in programming, problem-solving, and software development, driven by curiosity and a commitment
+                        Hello everyone, I am a B.Tech Computer Science and Engineering student with a strong
+                        foundation
+                        in programming, problem-solving, and software development, driven by curiosity and a
+                        commitment
                         to continuous learning.
                     </p><br>
                     <p>
-                        As an advanced AI user, I leverage AI tools to build efficient solutions. I specialize in MERN
-                        stack development and Java, creating scalable, practical, and performance-focused applications.
+                        As an advanced AI user, I leverage AI tools to build efficient solutions. I specialize in
+                        MERN
+                        stack development and Java, creating scalable, practical, and performance-focused
+                        applications.
                     </p><br>
                     <p>
-                        Beyond software engineering, I am deeply passionate about gaming. I bring creative concepts to
+                        Beyond software engineering, I am deeply passionate about gaming. I bring creative concepts
+                        to
                         life through hands-on game design and interactive development using Unity and C#.
                     </p>
                 </div>
             </div>
 
             <div class="skill-container-right">
-                <img src="Images/userAsset/blob vector.png" class="blob-style" alt="Decorative blob" loading="lazy" />
+                <img src="Images/userAsset/blob vector.png" class="blob-style" alt="Decorative blob" width="300"
+                    height="300" loading="lazy" decoding="async" />
 
-                <img src="Images/stack/HTML.png" alt="HTML icon" class="skills-logo" loading="lazy" />
-                <img src="Images/stack/CSS.png" alt="CSS icon" class="skills-logo" loading="lazy" />
-                <img src="Images/stack/Javascript.svg" alt="JavaScript icon" class="skills-logo" loading="lazy" />
-                <img src="Images/stack/React.png" alt="React icon" class="skills-logo" loading="lazy" />
-                <img src="Images/stack/NodeJs.svg" alt="NodeJs icon" class="skills-logo" loading="lazy" />
-                <img src="Images/stack/Docker.svg" alt="Docker icon" class="skills-logo" loading="lazy" />
-                <img src="Images/stack/Github.svg" alt="GitHub icon" class="skills-logo" loading="lazy" />
+                <img src="Images/stack/HTML.png" alt="HTML icon" class="skills-logo" width="90" height="90"
+                    loading="lazy" decoding="async" />
+                <img src="Images/stack/CSS.png" alt="CSS icon" class="skills-logo" width="90" height="90" loading="lazy"
+                    decoding="async" />
+                <img src="Images/stack/Javascript.svg" alt="JavaScript icon" class="skills-logo" width="90" height="90"
+                    loading="lazy" decoding="async" />
+                <img src="Images/stack/React.png" alt="React icon" class="skills-logo" width="90" height="90"
+                    loading="lazy" decoding="async" />
+                <img src="Images/stack/NodeJs.svg" alt="NodeJs icon" class="skills-logo" width="90" height="90"
+                    loading="lazy" decoding="async" />
+                <img src="Images/stack/Docker.svg" alt="Docker icon" class="skills-logo" width="90" height="90"
+                    loading="lazy" decoding="async" />
+                <img src="Images/stack/Github.svg" alt="GitHub icon" class="skills-logo" width="90" height="90"
+                    loading="lazy" decoding="async" />
+                <img src="Images/stack/nextjs-svgrepo-com.svg" alt="Next.js icon" class="skills-logo" width="90"
+                    height="90" loading="lazy" decoding="async" />
+                <img src="Images/stack/CSharp.png" alt="C# icon" class="skills-logo" width="90" height="90"
+                    loading="lazy" decoding="async" />
 
-                <img src="Images/stack/CSharp.png" alt="C# icon" class="skills-logo" loading="lazy" />
-
-                <img src="Images/stack/Java.svg" alt="Java icon" class="skills-logo" loading="lazy" />
-                <img src="Images/stack/Mysql.svg" alt="MySQL icon" class="skills-logo" loading="lazy" />
-                <img src="Images/stack/Git.svg" alt="Git icon" class="skills-logo" loading="lazy" />
-                <img src="Images/stack/Unity.png" alt="Unity icon" class="skills-logo" loading="lazy" />
-                <img src="Images/stack/N8n.svg" alt="N8n icon" class="skills-logo" loading="lazy" />
+                <img src="Images/stack/Java.svg" alt="Java icon" class="skills-logo" width="90" height="90"
+                    loading="lazy" decoding="async" />
+                <img src="Images/stack/Mysql.svg" alt="MySQL icon" class="skills-logo" width="90" height="90"
+                    loading="lazy" decoding="async" />
+                <img src="Images/stack/Git.svg" alt="Git icon" class="skills-logo" width="90" height="90" loading="lazy"
+                    decoding="async" />
+                <img src="Images/stack/Unity.png" alt="Unity icon" class="skills-logo" width="90" height="90"
+                    loading="lazy" decoding="async" />
+                <img src="Images/stack/N8n.svg" alt="N8n icon" class="skills-logo" width="90" height="90" loading="lazy"
+                    decoding="async" />
             </div>
 
         </div>
@@ -305,10 +355,12 @@
                     <div class="icon-wrapper">
                         <a href="https://www.linkedin.com/in/llhjll/" target="_blank" aria-label="LinkedIn profile"><i
                                 class="fa-brands fa-linkedin icon"></i></a>
-                        <a href="https://github.com/lIHJIl" target="_blank" aria-label="GitHub profile"><i class="fa-brands fa-github icon"></i></a>
-                        <a href="https://www.instagram.com/_l__h.j.__l_/" target="_blank" aria-label="Instagram profile"><i
-                                class="fa-brands fa-instagram icon"></i></a>
-                        <a href="mailto:himankjoshi2005@gmail.com" aria-label="Email Himank"><i class="fa-regular fa-envelope icon"></i></a>
+                        <a href="https://github.com/lIHJIl" target="_blank" aria-label="GitHub profile"><i
+                                class="fa-brands fa-github icon"></i></a>
+                        <a href="https://www.instagram.com/_l__h.j.__l_/" target="_blank"
+                            aria-label="Instagram profile"><i class="fa-brands fa-instagram icon"></i></a>
+                        <a href="mailto:himankjoshi2005@gmail.com" aria-label="Email Himank"><i
+                                class="fa-regular fa-envelope icon"></i></a>
                     </div>
                 </div>
             </div>
@@ -317,23 +369,103 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <!-- Font Awesome is already loaded via CDN CSS in <head>, Kit JS removed to avoid duplicate download -->
     <script>
-        var typeData = new Typed(".role", {
-            strings: [
-                // "Full Stack Developer",
-                "Web Developer",
-                "AI and Tech Savvy",
-                "Game Designer",
-                // "Backend Developer",
-                "Gamer",
+        document.addEventListener("DOMContentLoaded", function () {
+            var typeData = new Typed(".role", {
+                strings: [
+                    // "Full Stack Developer",
+                    "Web Developer",
+                    "AI and Tech Savvy",
+                    "Game Designer",
+                    // "Backend Developer",
+                    "Gamer",
+                ],
+                loop: true,
+                typeSpeed: 100,
+                backSpeed: 80,
+                backDelay: 1000,
+            });
 
-            ],
-            loop: true,
-            typeSpeed: 100,
-            backSpeed: 80,
-            backDelay: 1000,
+            // === Custom Skateboard Scrollbar Logic ===
+            const wrapper = document.getElementById("wrapper");
+            const track = document.getElementById("scrollbar-track");
+            const thumb = document.getElementById("scrollbar-thumb");
+            const thumbHeight = 45;
+            let isDragging = false;
+            let dragStartY = 0;
+            let dragStartScroll = 0;
+            let wobbleTimeout = null;
+
+            function updateThumbPosition() {
+                const scrollRatio = wrapper.scrollTop / (wrapper.scrollHeight - wrapper.clientHeight);
+                const maxTop = track.clientHeight - thumbHeight;
+                thumb.style.top = (scrollRatio * maxTop) + "px";
+            }
+
+            // Sync thumb position on scroll + trigger wobble
+            wrapper.addEventListener("scroll", function () {
+                updateThumbPosition();
+                // Wobble effect
+                thumb.classList.add("wobble");
+                clearTimeout(wobbleTimeout);
+                wobbleTimeout = setTimeout(function () {
+                    thumb.classList.remove("wobble");
+                }, 400);
+            });
+
+            // Click on track to jump to position
+            track.addEventListener("click", function (e) {
+                if (e.target === thumb || thumb.contains(e.target)) return;
+                const trackRect = track.getBoundingClientRect();
+                const clickY = e.clientY - trackRect.top;
+                const clickRatio = clickY / trackRect.height;
+                wrapper.scrollTop = clickRatio * (wrapper.scrollHeight - wrapper.clientHeight);
+            });
+
+            // Drag the skateboard thumb
+            thumb.addEventListener("mousedown", function (e) {
+                isDragging = true;
+                dragStartY = e.clientY;
+                dragStartScroll = wrapper.scrollTop;
+                e.preventDefault();
+            });
+
+            document.addEventListener("mousemove", function (e) {
+                if (!isDragging) return;
+                const deltaY = e.clientY - dragStartY;
+                const trackHeight = track.clientHeight - thumbHeight;
+                const scrollRange = wrapper.scrollHeight - wrapper.clientHeight;
+                wrapper.scrollTop = dragStartScroll + (deltaY / trackHeight) * scrollRange;
+            });
+
+            document.addEventListener("mouseup", function () {
+                isDragging = false;
+            });
+
+            // Touch support for mobile
+            thumb.addEventListener("touchstart", function (e) {
+                isDragging = true;
+                dragStartY = e.touches[0].clientY;
+                dragStartScroll = wrapper.scrollTop;
+                e.preventDefault();
+            }, { passive: false });
+
+            document.addEventListener("touchmove", function (e) {
+                if (!isDragging) return;
+                const deltaY = e.touches[0].clientY - dragStartY;
+                const trackHeight = track.clientHeight - thumbHeight;
+                const scrollRange = wrapper.scrollHeight - wrapper.clientHeight;
+                wrapper.scrollTop = dragStartScroll + (deltaY / trackHeight) * scrollRange;
+            });
+
+            document.addEventListener("touchend", function () {
+                isDragging = false;
+            });
+
+            // Initial position
+            updateThumbPosition();
         });
     </script>
 
